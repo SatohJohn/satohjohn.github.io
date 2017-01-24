@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let auth = document.querySelector('#subscription-auth');
 
     //htmlと同じ階層にjsがないと駄目
-    navigator.serviceWorker.register('/service-worker.js');
+    navigator.serviceWorker.register('service-worker.js');
     navigator.serviceWorker.ready
              .then((registration) => {
                  return registration.pushManager.subscribe({userVisibleOnly: true});
